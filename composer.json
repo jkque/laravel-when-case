@@ -1,0 +1,54 @@
+{
+    "name": "jkque/when-case",
+    "description": "Alternative way of switch case with more flexibility",
+    "keywords": [
+        "jkque",
+        "when-case"
+    ],
+    "homepage": "https://github.com/jkque/when-case",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "John Kevin Cadungog",
+            "email": "johnkevin.cadungog@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jkque\\WhenCase\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jkque\\WhenCase\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jkque\\WhenCase\\WhenCaseServiceProvider"
+            ],
+            "aliases": {
+                "WhenCase": "Jkque\\WhenCase\\WhenCaseFacade"
+            }
+        }
+    }
+}
